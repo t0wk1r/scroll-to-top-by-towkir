@@ -28,8 +28,8 @@ function towkir_scroll_to_top(){
 
 }
 
-add_action('wp_enqueue_scripts', 'scroll_to_top_styles');
-function scroll_to_top_styles(){
+add_action('wp_enqueue_scripts', 'towkir_scroll_to_top_styles');
+function towkir_scroll_to_top_styles(){
 	wp_enqueue_style('towkir-font-awesome', PLUGINS_URL('css/all.min.css', __FILE__));
 	wp_enqueue_style('towkir-scroll-to-top', PLUGINS_URL('css/scroll-to-top-by-towkir.css', __FILE__));
 	wp_enqueue_script('towkir-script-scroll-to-top', PLUGINS_URL('scripts/scroll-to-top-by-towkir.js', __FILE__), array('jquery'), '' , false);
